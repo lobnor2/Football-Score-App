@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
-      <h1>Football Score</h1>
       <Navbar />
       <Content />
       <Footer />

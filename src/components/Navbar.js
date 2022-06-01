@@ -2,7 +2,10 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className='navbar'>Navbar</div>
+    <div className='navbar'>
+            <h1>Football Score ⚽</h1>
+
+    </div>
   )
 }
 
