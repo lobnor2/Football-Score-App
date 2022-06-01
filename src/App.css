@@ -136,7 +136,12 @@ img {
     align-items: center;
     color: black;
 }
-
+.standing-results {
+    display: grid;
+    place-items: center;
+    padding: 10px 0;
+    /* width: 100%; */
+}
 
 
 @media screen and (max-width:600px) {
@@ -177,6 +182,8 @@ img {
     #select-league, #select-year {
         /* margin-bottom: 30px; */
         border: 1px solid black;
+        padding: 15px 5px;
+        margin-bottom: 10px;
     }
     .tabs {
         border: none;
