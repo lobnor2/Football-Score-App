@@ -72,10 +72,13 @@
     margin: 5px;
     cursor: pointer;
     transition: 0.1s ease-in-out;
+    background-color: white;
+    
 }
 .league-div:hover {
     transform: scale(1.1);
     border: 1px solid green ;
+    z-index: 10;
 }
 .league-div p {
     font-size: 20px;
@@ -99,6 +102,28 @@ img {
 #select-year {
     padding :5px;
 }
+.standing-h3 {
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50vw;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 3px 3px 10px 0.1px rgba(103, 103, 103, 0.487);
+    
+}
+.standing-span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0;
+}
+.standing-h3 img {
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+}
 
 .footer {
     width: 100%;
@@ -108,4 +133,29 @@ img {
     justify-content: center;
     align-items: center;
     color: black;
+}
+
+
+
+@media screen and (max-width:600px) {
+    
+    .leagues-container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        /* cursor: pointer; */
+        margin: 30px;
+        
+
+
+    }
+    .league-div:hover {
+        transform: none;
+    }
+    .standing-h3 {
+        width: 100%;
+
+    }
+    #select-league, #select-year {
+        margin-bottom: 30px;
+    }
 }

@@ -1,20 +1,22 @@
 import axios from 'axios';
 import React, { useState, useEffect} from 'react';
-import Loader from "react-loader-spinner";
+import { BeatLoader } from "react-spinners";
+
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
 const Standings = () => {
     const [data, setData] = useState([]);
     const [selectedLeague, setSelectedLeague] = useState('eng.1');
-    const [selectedYear, setSelectedYear ] = useState("2022");
+    const [selectedYear, setSelectedYear ] = useState("2021");
     const [loading, setLoading] = useState(false);
 
 
     useEffect(() => {
         setLoading(true);
         axios.get(`https://api-football-standings.azharimm.site/leagues/${selectedLeague}/standings?season=${selectedYear}`).then((res) => {
-            console.log(res.data.data);
+            console.log(res.data.data.standings);
+            setData(res.data.data.standings);
             
         }).catch(err => console.log(err)).finally(() => setLoading(false));
 
@@ -71,7 +73,20 @@ const Standings = () => {
         </select>
         </div>
         <div className="standing-results">
-
+            {loading ? <BeatLoader /> : 
+            data.map((data, index) => (
+                <div key={data.team.id} className="standing-info-div">
+                    <h3 className='standing-h3'>
+                        <span className='standing-span'>
+                            {`${index+1}.`}
+                            <img src={data.team.logos[0].href} alt="" className='logoimage'/>
+                        </span>
+                        {data.team.name}
+                        {/* {data.stats[0].description} */}
+                        {data.team.shorDisplayName}
+                    </h3>
+                </div>
+            ))}
         </div>
     </div>
   )
