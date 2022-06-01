@@ -171,11 +171,12 @@ img {
         transform: none;
     }
     .standing-h3 {
-        /* width: 100vw; */
+        width: 80vw;
 
     }
     #select-league, #select-year {
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
+        border: 1px solid black;
     }
     .tabs {
         border: none;
