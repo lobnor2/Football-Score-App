@@ -42,6 +42,7 @@
     background-color: black;
     color: white;
     height: 50px;
+    cursor: pointer;
 }
 .tab-standings {
     width: 300px;
@@ -53,7 +54,52 @@
     background-color: black;
     color: white;
     height: 50px;
+    cursor: pointer;
+
 }
+.leagues-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.league-div {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+.league-div:hover {
+    transform: scale(1.1);
+    border: 1px solid green ;
+}
+.league-div p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+
+}
+img {
+    width: 200px;
+    height: auto;
+}
+.select-container {
+    display: flex;
+    gap: 3px;
+}
+#select-league {
+    width: 100%;
+    padding: 10px 5px;
+}
+#select-year {
+    padding :5px;
+}
+
 .footer {
     width: 100%;
     height: 10vh;
