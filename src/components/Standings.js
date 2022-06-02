@@ -73,17 +73,37 @@ const Standings = () => {
         </select>
         </div>
         <div className="standing-results">
+            <div className='winloss'>
+              <span className='win-loss'>Wins</span>
+              <span className='win-loss'>Losses</span>
+              <span className='win-loss'>Ties</span>
+              <span className='win-loss'>Game Played</span>
+              <span className='win-loss'>Points</span>
+              
+            </div>
             {loading ? <BeatLoader /> : 
+            
             data.map((data, index) => (
+
                 <div key={data.team.id} className="standing-info-div">
+                    
+
                     <h3 className='standing-h3'>
                         <span className='standing-span'>
                             {`${index+1}.`}
                             <img src={data.team.logos[0].href} alt="" className='logoimage'/>
                         </span>
                         {data.team.name}
+                        <div className='winlossdata'>
+                          <span className='win-lossdata'>{data.stats[0].value}</span>
+                          <span className='win-lossdata'>{data.stats[1].value}</span>
+                          <span className='win-lossdata'>{data.stats[2].value}</span>
+                          <span className='win-lossdata'>{data.stats[3].value}</span>
+                          <span className='win-lossdata'>{data.stats[4].value}</span>
+                          {/* <span className='win-loss'>{data.stats[5].value}</span> */}
+                        </div>
                         {/* {data.stats[0].description} */}
-                        {data.team.shorDisplayName}
+                        {/* {data.team.stats[`${index}`].name} */}
                     </h3>
                 </div>
             ))}

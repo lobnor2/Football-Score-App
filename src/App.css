@@ -109,7 +109,7 @@ img {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 50vw;
+    width: 90vw;
     padding: 10px;
     margin-top: 10px;
     box-shadow: 3px 3px 10px 0.1px rgba(103, 103, 103, 0.487);
@@ -140,12 +140,48 @@ img {
     display: grid;
     place-items: center;
     padding: 10px 0;
+    /* margin-bottom: 30px; */
     /* width: 100%; */
 }
 .league-beatloader {
     position: absolute;
     left: 50%;
     /* text-align:center; */
+}
+.winloss {
+    width: 100%;
+    text-align: right;
+    margin: 20px 0;
+}
+.winlossdata{
+    /* border: 1px solid green; */
+    padding: 5px;
+    text-align: right;
+    margin-left: 200px;
+    width: 100%;
+    
+
+
+}
+.win-lossdata{
+    /* border: 1px solid blue; */
+    font-size: 23px;
+    padding: 0 30px;
+    margin: 0 2px;
+
+    
+}
+.win-loss {
+    color: rgba(0, 0, 255, 0.715); 
+    text-align: right;
+    border: 1px solid black;
+    font-size: 18px;
+    width: 100%;
+    padding:  5px 13px;
+    border-radius: 5px;
+    margin: 5px 2px;
+    /* height: 50px; */
+    /* padding: 0 180px; */
 }
 
 
