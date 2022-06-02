@@ -190,17 +190,27 @@ img {
         width: 100vw;
     }
     .leagues-container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
+        /* width: 100%; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* grid-template-columns: repeat(2,1fr); */
         /* cursor: pointer; */
         /* margin: 30px; */
-        width: 100vw;
-
-        
-
-
+        /* width: 100vw; */
     }
+    .tab-leagues, .tab-standings{
+        width: 91%;
+        margin: 5px 20px;
+    }
+
+    .tabs {
+        display: flex;
+        flex-direction: column;
+        /* width: 90vw; */
+        border: 1px solid black;
+        margin: 0 10px;
+    }
+    
     .league-div{
         width: 96%;
         padding: 0;
@@ -217,18 +227,69 @@ img {
         transform: none;
     }
     .standing-h3 {
-        width: 80vw;
+        width: 90vw;
 
     }
-    #select-league, #select-year {
+    #select-league{
         /* margin-bottom: 30px; */
+        width: 70%;
+
         border: 1px solid black;
         padding: 15px 5px;
-        margin-bottom: 10px;
+        /* margin: 0 10px; */
     }
+    #select-year{
+        width: 30vw;
+        border: 1px solid black;
+        padding: 15px 5px;
+        /* margin-right: 10px; */
+    }
+    
     .tabs {
         border: none;
+        margin-bottom: 20px;
         box-shadow: 3px 3px 10px 0.1px rgba(103, 103, 103, 0.157);
 
     }
+
+    .standing-results {
+        display: grid;
+        place-items: center;
+        padding: 10px 0;
+        /* margin-bottom: 30px; */
+        /* width: 100%; */
+    }
+    .standing-span {
+        font-size: 15px;
+    }
+    .standing-span img {
+        width: 30px;
+    }
+    .standing-h3 {
+        font-size: 11px;
+    }
+    
+    .win-loss {
+        font-size: 10px;
+        padding: 0;
+        border: none;
+        margin-right: 3px;
+        /* margin-bottom: -50px; */
+
+    }
+    .winloss {
+        margin: 0;
+        margin-top: 20px;
+    }
+    .winlossdata {
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+    }
+    .win-lossdata {
+        font-size: 10px;
+        padding: 0;
+        margin: 0 13px;
+    }
+
 }
