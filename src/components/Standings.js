@@ -47,11 +47,11 @@ const Standings = () => {
           <option value="mex.1">Mexican Liga BBVA MX</option>
           <option value="por.1">Portuguese Liga</option>
           <option value="rus.1">Russian Premier League</option>
-          <option value="sgp.1">Singaporean Premier League</option>
-          <option value="esp.1">Spanish Primera División</option>
-          <option value="tha.1">Thai Premier League</option>
+          {/* <option value="sgp.1">Singaporean Premier League</option> */}
+          <option value="esp.1">Spanish LaLiga</option>
+          {/* <option value="tha.1">Thai Premier League</option> */}
           <option value="tur.1">Turkish Super Lig</option>
-          <option value="uga.1">Ugandan Super League</option>
+          {/* <option value="uga.1">Ugandan Super League</option> */}
         </select>
         <select
           name="select-year"
